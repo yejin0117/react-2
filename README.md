@@ -2,6 +2,31 @@
 <h1>202330117 송예진</h1>
 <hr>
 
+## 🔖 9월 24일 (5주차)
+<h2> searchParams란? </h2>
+
+- url의 쿼리 문자열을 읽는 방법
+- searchParams는 컴포넌트의 props로 전달되며, 내부적으로는 URLSearchParams처럼 작동함
+
+<h2> Linking between pages(페이지 간 연결) </h2>
+
+- <Link> 컴포넌트를 사용하여 경로 사이를 탐색
+- HTML <a>태그를 확장하여 prefetching 및 client-side navigation 기능을 제공하는 
+ 
+<h2> 초입 </h2>
+
+- 경로는 기본적을 서버에서 렌더링됨
+- 새 경로를 표시하기 전에 서버의 응답을 기다려야 하는 경우가 많음
+- perfetching, streaming, client-side-transition(클라이언트 사이드 전환) 기능이 기본 제공되어 네비게이션 속도가 빠르고 반응성이 뛰어남
+- 네비게이션이 작동하는 방식, 동적 라우트와 느린 네트워크에 맞게 네비게이션을 최적화하는 방법을 설명
+
+<h2>Streaming(스트리밍)</h2>
+
+- 전체 경로가 렌더링될 때까지 기다리지 않고, 동적 경로의 일부가 준비되는 즉시 클라이언트에 전송할 수 있음
+- 동적 경로의 경우, 부분적으로 미리 가져올 수 있다는 뜻
+- 공유 레이아웃과 로딩 스켈레톤을 미리 요청
+
+
 ## 🔖 9월 17일 (4주차)
 <h2>git checkout vs git switch 차이</h2>
 

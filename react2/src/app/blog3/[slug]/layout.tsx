@@ -1,18 +1,13 @@
-import Link from "next/link";
-
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
       <body>
       <header>Root Layout Header</header>
-        <nav>
-          <Link href="/">HOME</Link>| <Link href="/blog">Blog</Link> 
-          | <Link href="/blog3">Blog</Link> 
-        </nav>
+        {children}
       <footer>Root Layout Footer</footer>
       </body>
     </html>
