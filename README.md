@@ -2,6 +2,36 @@
 <h1>202330117 송예진</h1>
 <hr>
 
+## 🔖 10월 17일 (8주차)
+<h2> Intrduction </h2>
+
+- 기본적으로 layout과 page는 server component입니다.
+- serve에서 데이터를 가져와 UI의 일부를 렌더링할 수 있고, 선택적으로 결과를 cache한 후 client로 스트리밍할 수 있음
+- 상호작용이나 브라우저 API가 필요한 경우 client component를 사용하여 기능을 계층화할 수 있음
+- 이번 장에서는 Next.js에서 server 및 client component가 작동하는 방식과 이를 사용하는 시기를 설명하고, 애플리케이션에서 이 컴포넌트를 사용하는 방법에 대한 예제를 소개합니다.
+
+<h2> server 및 client component를 언제 사용해야 하나요? </h2>
+
+- server 및 client component를 사용하면 사용하는 사례에 따라 각각의 환경에서 필요한 로직을 실행할 수 있음
+- 다음과 같은 항목이 필요할 경우에는 client component를 사용함
+1. state 및 event handler
+2. Lifecycle logic
+3. 브라우저 전용 API
+4. 사용자 정의 Hook
+
+- 다음과 같은 항목이 필요할 경우엔 server component 사용
+1. 서버의 데이터베이스 혹은 API에서 server component를 사용
+2. 보안 데이터를 client에 노출하지 않고 사용
+3. 브라우저로 전송되는 JavaScript의 양을 줄이고 싶을 때 사용
+4. 콘텐츠가 포함된 첫 번째 페인트(First Contentful Paint-FCP)를 개선하고, 콘텐츠를 client에 점진적으로 스트리밍
+
+<h2>3-2 JS bundle 크기 줄이기</h2>
+
+- UI의 큰 부분을 client component로 표시하는 대신 특정 대화형 component에 "use client"로 추가
+- <Layout> component는 로고와 탐색 링크와 같은 정적 요소가 대부분이지만 대화형 검색창이 포함되어 있습니다.
+- <Search />는 대화형이기 때문에 client component가 되야 하지만, 나머지 layout은 server component로 유지될 수 있음
+- # 나머지 layout은 server component로 유지해야함.
+
 ## 🔖 10월 1일 (6주차)
 <h2> Client-side transitions(클라이언트 측 전환)</h2>
 
