@@ -2,6 +2,31 @@
 <h1>202330117 송예진</h1>
 <hr>
 
+## 🔖 10월 22일 (9주차)
+<h2> server 및 client component 인터리빙</h2>
+
+- client의 state를 사용하여 표시 여부를 전환하는 모달 컴포넌트 안에 server에서 데이터를 가져오는 카트 컴포넌트가 있음
+- 모든 server component가 server에서 미리 렌더링됨
+- client component가 렌더링되어야 하는 위치에 대한 참조가 포함됨
+
+<h2>Context란 무엇인가?</h2>
+
+- 전역 상태 관리
+- props drilling 문제 해결
+- React 컴포넌트에서 사용
+- 클라이언트 컴포넌트
+- 서버 컴포넌트
+- 성능
+
+<h2>Context provider (컨텍스트 제공자)</h2>
+
+- React Context는 일반적으로 아래 테마처럼 전역 상태를 공유하는데 사용됨
+- server component에서는 React Context가 지원되지 않음
+- Provider component를 트리에서 가능한 한 깊숙이 렌더링해야함
+- ThemeProvider가 전체 Html 문서 대신 children만 래핑하는 방식 주목
+- 속성선택자(Attribute Selector)로 CSS에서 클래스(.class)나 아이디(#id)처럼 요소를 선택하는 또 다른 방법
+- class를 여러 개 붙이는 경우보다 스타일 충돌 줄임
+
 ## 🔖 10월 17일 (8주차)
 <h2> Intrduction </h2>
 
