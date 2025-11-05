@@ -2,6 +2,40 @@
 <h1>202330117 송예진</h1>
 <hr>
 
+## 🔖 11월 5일 (11주차)
+<h2>데이터 가져오기</h2>
+
+- fetch 응답은 기본적으로 캐싱되지 않음
+- 개발 중에는 가시성과 디버깅을 개선하기 위해 fetch 호출을 기록할 수 있음
+- 서버 컴포넌트는 서버에서 렌더링 되기 때문에 ORM이나 데이터베이스 클라이언트를 사용해서 안전하게 데이터베이스 쿼리를 실행할 수 있습니다.
+- 컴포넌트를 비동기 함수로 변환하고 호출을 기다리면 됨
+- 클라이언트 컴포넌트에서 데이터를 fetch하는 방법은 두가지
+1. React의 use Hook
+2. SWR 또는 React 쿼리같은 통신 라이브러리
+
+## 🔖 10월 29일 (10주차)
+<h2>Context provider</h2>
+
+- RootLayout 수정 코드 설명 - server 컴포넌트
+- ThemeStatus는 출력을 원하는 곳에 삽입
+- 문서의 설명으로는 {children}을 감싸면 최적화 할 수 있다고 되어 있지만 우리의 경우에는 동작하지 않음 => 왜냐면 우린 css의 속성 선택자로 html을 사용했기 때문
+
+<h2>2. Provider 배치</h2>
+
+- RootLayout에서 ThemeProvider로 루트를 감싸줌
+
+
+<h2>3. Consumer 사용(theme-status.tsx)</h2>
+
+<h2>외부(서드 파티) component</h2>
+
+- client component에 래핑하여 예상대로 작동하는지 확인
+- useState를 사용하지만 "use client" 지시문은 없음
+- client component 내에서 사용하면 예상대로 작동
+
+<h2>npm i acme-carousel</h2>
+  
+
 ## 🔖 10월 22일 (9주차)
 <h2> server 및 client component 인터리빙</h2>
 
